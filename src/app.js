@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 consign({ cwd: 'src' })
-  .include('controllers')
-  .then('services')
+  .include('services')
+  .then('controllers')
   .then('routes')
   .into(app)
   ;

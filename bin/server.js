@@ -1,16 +1,14 @@
 'use strict';
 
 const app = require('../src/app');
-const port = normalizaPort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 
-function normalizaPort(val) {
+function normalizePort(val) {
     const port = parseInt(val, 10);
-    if (isNaN(port)) {
+    if (isNaN(port)) 
         return val;
-    }
-    if (port >= 0) {
+    if (port >= 0) 
         return port;
-    }
     return false;
 }
 
